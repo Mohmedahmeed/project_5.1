@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background"
+    android:padding="16dp">
+
+    <!-- Barre d'outils pour les actions sur la liste de tâches -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFF556E"
+        android:layout_gravity="end"
+        android:paddingLeft="10dp">
+
+        <!-- Bouton d'édition du nom de la liste -->
+        <ImageButton
+            android:id="@+id/edit_name_todoList_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_edit"
+            android:visibility="gone"
+            android:paddingLeft="10dp"/>
+
+        <!-- Case à cocher pour la sélection de la liste -->
+        <CheckBox
+            android:id="@+id/checkbox_for_selected_items_todolist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:buttonTint="@color/white"
+            android:layout_marginTop="3dp"/>
+
+        <!-- Bouton de confirmation d'édition -->
+        <ImageButton
+            android:id="@+id/check_edit_name_todolist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_check"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Bouton de suppression de la liste -->
+        <ImageButton
+            android:id="@+id/btn_delete_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_delete"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <!-- Contenu de la liste de tâches -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#E0E0E0"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- Nom de la liste de tâches -->
+        <TextView
+            android:id="@+id/text_view_name_todolist_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TodoListName"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+
+        <!-- Champ d'édition du nom de la liste -->
+        <EditText
+            android:id="@+id/edit_text_name_todolist_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="TodoListName"
+            android:backgroundTint="@color/white"
+            android:hint="TodoListName"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>
